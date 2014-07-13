@@ -7,7 +7,7 @@ require "rut_cl/version"
 Gem::Specification.new do |s|
   s.name        = "rut_cl"
   s.version     = RutCl::VERSION
-s.authors     = ["Coto Cisternas"]
+  s.authors     = ["Coto Cisternas"]
   s.email       = ["cotocisternas@gmail.com"]
   s.homepage    = "http://cotocisternas.cl/projects/rutcl"
   s.summary     = "Chilean RUN/RUT Validator"
