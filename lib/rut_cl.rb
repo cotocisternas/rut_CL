@@ -10,6 +10,10 @@ module RutCL
       rut.insert(3, '.').insert(7, '.').reverse.join.to_s
     end
 
+    def strip_dots(rut)
+      rut.gsub(/[^0-9 k K -]/, "")
+    end
+
     def length(rut)
       return true if raw(rut).length <= 9
       return true if raw(rut).length >= 7
