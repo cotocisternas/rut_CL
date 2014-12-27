@@ -15,8 +15,7 @@ module RutCL
     end
 
     def length(rut)
-      return true if raw(rut).length <= 9
-      return true if raw(rut).length >= 7
+      return true if raw(rut).length <= 9 && raw(rut).length >= 7
       return false
     end
 
@@ -49,7 +48,7 @@ module RutCL
     def format(rut)
       rut = raw(rut).reverse.from(1).split("").map(&:to_i)
       rut = rut.insert(3, '.').insert(7, '.').reverse.join.to_s
-      rut+"-"+RutCL.get_dv(rut).to_s
+      [rut, RutCL.get_dv(rut).to_s].join('-')
     end
   end
 end
